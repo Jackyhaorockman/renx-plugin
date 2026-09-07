@@ -1,7 +1,7 @@
 {
   "name": "renx-plugins",
   "interface": {
-    "displayName": "Renx Plugins"
+    "displayName": "RenX"
   },
   "plugins": [
     {
