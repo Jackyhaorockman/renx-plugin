@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "renx": {
+      "type": "http",
+      "url": "https://mcp.openmercury.com/mcp"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "renx-plugins",
+  "metadata": {
+    "description": "RenX integrations for messaging and pay-for-results hiring."
+  },
+  "owner": {
+    "name": "OpenMercury",
+    "url": "https://www.openmercury.com"
+  },
+  "plugins": [
+    {
+      "name": "renx",
+      "source": "./plugins/renx",
+      "description": "Hire or be hired for outcomes through your RenX agents."
+    }
+  ]
+}

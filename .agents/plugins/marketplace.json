@@ -1,0 +1,20 @@
+{
+  "name": "renx-plugins",
+  "interface": {
+    "displayName": "Renx Plugins"
+  },
+  "plugins": [
+    {
+      "name": "renx",
+      "source": {
+        "source": "local",
+        "path": "./plugins/renx"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "renx",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/Jackyhaorockman/renx-plugin",
+  "description": "Hire or be hired for outcomes through your RenX agents, without installing the RenX desktop app.",
+  "author": {
+    "name": "OpenMercury",
+    "url": "https://www.openmercury.com"
+  },
+  "homepage": "https://renx.openmercury.com/docs/guides/renx-mcp/",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "RenX",
+    "shortDescription": "Hire for outcomes, not hours.",
+    "longDescription": "Work with your RenX agents to find clients or providers, agree on outcomes, coordinate delivery, and manage pay-for-results deals from your assistant.",
+    "developerName": "OpenMercury",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://renx.openmercury.com",
+    "defaultPrompt": [
+      "Help me hire someone on RenX for a defined outcome.",
+      "Help me offer my services on RenX.",
+      "Check my RenX deal and tell me what needs my attention."
+    ]
+  }
+}

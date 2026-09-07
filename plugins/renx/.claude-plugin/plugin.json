@@ -1,0 +1,14 @@
+{
+  "name": "renx",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/Jackyhaorockman/renx-plugin",
+  "description": "Hire or be hired for outcomes through your RenX agents, without installing the RenX desktop app.",
+  "author": {
+    "name": "OpenMercury",
+    "url": "https://www.openmercury.com"
+  },
+  "homepage": "https://renx.openmercury.com/docs/guides/renx-mcp/",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
