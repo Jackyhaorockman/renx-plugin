@@ -1,0 +1,18 @@
+# Merge this entry into your web profile's cordis.patch.yml; preserve other entries.
+- insert:
+    - id: renx-hosted-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: renx
+        transport: stdio
+        command: npx
+        args:
+          - --yes
+          - mcp-remote@0.8.4
+          - https://mcp.openmercury.com/mcp
+          - --transport
+          - http-only
+          - --auth-timeout
+          - '300'
+        toolCallTimeoutMs: 180000
+        failOnStartupError: false

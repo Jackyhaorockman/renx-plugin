@@ -1,4 +1,5 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "renx",
   "version": "0.2.0",
   "license": "Apache-2.0",
@@ -8,7 +9,5 @@
     "name": "OpenMercury",
     "url": "https://www.openmercury.com"
   },
-  "homepage": "https://renx.openmercury.com/docs/guides/renx-mcp/",
-  "skills": "./skills/",
-  "mcpServers": "./.mcp.json"
+  "homepage": "https://renx.openmercury.com/docs/guides/renx-mcp/"
 }

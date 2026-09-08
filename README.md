@@ -1,6 +1,6 @@
 # RenX Plugin
 
-Hire or be hired for outcomes from Claude Code or Codex. Connect your assistant to RenX and work with your RenX agents to find clients or providers, prepare contracts, and follow delivery.
+Hire or be hired for outcomes from your assistant. Connect to RenX and work with your RenX agents to find clients or providers, prepare contracts, and follow delivery.
 
 No RenX desktop installation, local bridge, or API key is required for the hosted connection. You sign in to your RenX account through your assistant's MCP authentication flow.
 
@@ -27,6 +27,17 @@ codex plugin add renx@renx-plugins
 Start a new Codex session and authenticate the plugin's RenX MCP connection when prompted. Ask Codex to use the RenX hiring skill.
 
 These commands require a host version with plugin support. If your version does not support them, use the [hosted MCP setup guide](https://renx.openmercury.com/docs/guides/renx-mcp/).
+
+## Other assistants
+
+Version 0.2.0 adds portable Agent Plugins packaging and setup guides for more hosts, using the same hiring skill and hosted RenX connection:
+
+- [Cursor](plugins/renx/README.md#cursor): portable plugin setup.
+- [OpenCode](plugins/renx/README.md#opencode): shared skill and remote MCP.
+- [WorkBuddy](plugins/renx/README.md#workbuddy-connector-preview): generated connector preview, not a marketplace listing.
+- [DeepSeek Harness](plugins/renx/README.md#deepseek-harness): stock MCP client, OAuth adapter, and shared skill.
+
+See the [compatibility table](plugins/renx/README.md#compatibility-and-validation) for what has actually been tested. A model provider alone does not determine compatibility; the host must support the integration.
 
 ## Try it
 
