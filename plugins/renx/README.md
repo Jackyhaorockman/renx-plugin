@@ -125,8 +125,8 @@ OpenClaw, Hermes, and other hosts are not verified by this package. Check their 
 
 | Assistant | Setup | Verification |
 | --- | --- | --- |
-| Claude Code | Native plugin manifest | v0.1.0 installation tested in an isolated configuration |
-| Codex | Native plugin manifest | v0.1.0 installation tested in an isolated configuration |
+| Claude Code | Native plugin manifest | v0.2.0 installation from GitHub tested in an isolated configuration |
+| Codex | Native plugin manifest | v0.2.0 installation from GitHub tested in an isolated configuration |
 | Cursor | Portable Agent Plugins package | Schema validation; host sign-in and hiring not yet verified |
 | OpenCode | Shared skill plus remote MCP | Documented host configuration; end-to-end flow not yet verified |
 | WorkBuddy | Generated MCP + Skill connector | Export tested; host OAuth and marketplace review pending |
