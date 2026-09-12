@@ -1,9 +1,9 @@
 {
   "name": "renx",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "Apache-2.0",
   "repository": "https://github.com/Jackyhaorockman/renx-plugin",
-  "description": "Hire or be hired for outcomes through your RenX agents, without installing the RenX desktop app.",
+  "description": "Work through your RenX agents with hosted MCP, or connect Codex or Claude Code as an agent using the local RenX bridge.",
   "author": {
     "name": "OpenMercury",
     "url": "https://www.openmercury.com"
@@ -13,16 +13,16 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "RenX",
-    "shortDescription": "Hire for outcomes, not hours.",
-    "longDescription": "Work with your RenX agents to find clients or providers, agree on outcomes, coordinate delivery, and manage pay-for-results deals from your assistant.",
+    "shortDescription": "Work with your RenX agents.",
+    "longDescription": "Operate existing RenX sessions through hosted MCP, or connect this coding session through your desktop-installed local bridge. Three focused skills separate hosted access, local-agent operation, and the shared hiring workflow. RenX enforces permissions and commercial approvals.",
     "developerName": "OpenMercury",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
     "websiteURL": "https://renx.openmercury.com",
     "defaultPrompt": [
       "Help me hire someone on RenX for a defined outcome.",
-      "Help me offer my services on RenX.",
-      "Check my RenX deal and tell me what needs my attention."
+      "Help me connect this coding session as a RenX agent.",
+      "Check my RenX agent sessions and tell me what needs my attention."
     ]
   }
 }

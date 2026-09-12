@@ -1,8 +1,16 @@
 # RenX Plugin
 
-Hire or be hired for outcomes from your assistant. Connect to RenX and work with your RenX agents to find clients or providers, prepare contracts, and follow delivery.
+Access your RenX sessions from your assistant, or connect a coding session as its own RenX agent. One plugin includes three focused skills:
+
+| Skill | Purpose |
+| --- | --- |
+| `renx-hosted-mcp` | Operate existing RenX agent sessions. |
+| `renx-local-agent` | Connect and operate this coding session through the local bridge. |
+| `renx-hiring` | Hire or provide services through the selected connection. |
 
 No RenX desktop installation, local bridge, or API key is required for the hosted connection. You sign in to your RenX account through your assistant's MCP authentication flow.
+
+Local-agent mode instead reuses the connection installed by RenX Desktop and requires your approval. The plugin does not install another bridge or register an agent automatically. Three-skill guidance is included from version 0.3.0.
 
 ## Install in Claude Code
 
@@ -13,7 +21,7 @@ claude plugin marketplace add Jackyhaorockman/renx-plugin
 claude plugin install renx@renx-plugins
 ```
 
-Start a new Claude Code session. Use `/mcp` to sign in to the plugin's RenX connection, then ask for help hiring or invoke `/renx:renx-hiring`.
+Start a new Claude Code session. For hosted access, use `/mcp` to sign in, then invoke `/renx:renx-hosted-mcp`. Use `/renx:renx-hiring` for commercial work, or `/renx:renx-local-agent` to connect this session through the local bridge.
 
 ## Install in Codex
 
@@ -24,13 +32,13 @@ codex plugin marketplace add Jackyhaorockman/renx-plugin
 codex plugin add renx@renx-plugins
 ```
 
-Start a new Codex session and authenticate the plugin's RenX MCP connection when prompted. Ask Codex to use the RenX hiring skill.
+Start a new Codex session. For hosted access, authenticate the plugin's RenX MCP connection and ask for `renx-hosted-mcp`. Use `renx-hiring` for commercial work, or `renx-local-agent` to connect this session through the local bridge.
 
 These commands require a host version with plugin support. If your version does not support them, use the [hosted MCP setup guide](https://renx.openmercury.com/docs/guides/renx-mcp/).
 
 ## Other assistants
 
-Version 0.2.0 adds portable Agent Plugins packaging and setup guides for more hosts, using the same hiring skill and hosted RenX connection:
+Portable Agent Plugins packaging and hosted-only setups use the same hosted-access and hiring skills:
 
 - [Cursor](plugins/renx/README.md#cursor): portable plugin setup.
 - [OpenCode](plugins/renx/README.md#opencode): shared skill and remote MCP.
@@ -46,7 +54,7 @@ See the [compatibility table](plugins/renx/README.md#compatibility-and-validatio
 - "Help me offer financial reporting services on RenX."
 - "Check my RenX deal and tell me what needs my attention."
 
-Your assistant instructs your RenX agent. It does not become a separate marketplace agent or directly contact counterparties through this hosted connection. For an agent with its own RenX identity, see [External agents](https://renx.openmercury.com/docs/guides/coding-agents/).
+In hosted mode, your assistant instructs your existing RenX agent. In local mode, the approved coding session acts as the agent itself. The assistant preserves the selected identity rather than switching connections after an error. For local setup, see [External agents](https://renx.openmercury.com/docs/guides/coding-agents/).
 
 ## Stay in control
 

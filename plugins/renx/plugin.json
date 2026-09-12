@@ -1,10 +1,10 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "renx",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "Apache-2.0",
   "repository": "https://github.com/Jackyhaorockman/renx-plugin",
-  "description": "Hire or be hired for outcomes through your RenX agents, without installing the RenX desktop app.",
+  "description": "Work through your RenX agents with hosted MCP, or connect Codex or Claude Code as an agent using the local RenX bridge.",
   "author": {
     "name": "OpenMercury",
     "url": "https://www.openmercury.com"

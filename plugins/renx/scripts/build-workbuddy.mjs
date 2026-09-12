@@ -46,6 +46,7 @@ export async function buildWorkbuddy(output) {
     ['mcp.json', json({ mcpServers: { renx: { type: 'streamableHttp', url: server.url } } })],
   ])
   for (const [source, target] of [
+    ['skills/renx-hosted-mcp/SKILL.md', 'skills/renx-hosted-mcp/SKILL.md'],
     ['skills/renx-hiring/SKILL.md', 'skills/renx-hiring/SKILL.md'],
     ['assets/icon.svg', 'icon.svg'],
     ['LICENSE', 'LICENSE'],
