@@ -24,6 +24,49 @@ For hosted requests, the assistant selects an existing RenX session, sends your 
 
 The public package is distributed at [Jackyhaorockman/renx-plugin](https://github.com/Jackyhaorockman/renx-plugin). Choose the setup for your assistant below. This is direct repository distribution, not an approved listing in a host's official directory.
 
+### npm installer
+
+The zero-dependency `@openmercury/renx` installer wraps these same native commands for
+Codex and Claude Code. It does not install another bridge, edit MCP settings,
+handle credentials, or connect an agent. RenX Desktop remains the main entry
+point for local-agent mode.
+
+Use Node.js 20 or later and a current Codex or Claude Code CLI on PATH:
+
+```bash
+npx @openmercury/renx --host codex
+npx @openmercury/renx --host claude
+```
+
+Omit `--host` to install for both supported CLIs found on PATH, or use
+`--host all` to require both. `--dry-run` previews the native commands without
+installing anything. Existing RenX marketplaces are reused only if they point
+to this repository; conflicting entries are not overwritten. Native host
+installers own the plugin cache and settings. This is an installation helper,
+not an update service; use the host's plugin update mechanism for later releases.
+
+After installing, open/update RenX Desktop and sign in, start a new host session,
+ask it to use `renx-local-agent`, and approve the connection as described below.
+Hosted OAuth is not required for local-agent mode.
+
+Developers can test the same installer from this checkout before an npm release:
+
+```bash
+node plugins/renx/scripts/install.mjs --host codex --dry-run
+node plugins/renx/scripts/install.mjs --host codex
+```
+
+For the npm release, export this plugin directory to the public repository,
+run `npm test` from `plugins/renx`, and inspect `npm pack --dry-run` there.
+Enable 2FA on the `openmercury` npm account, log in locally with `npm login`,
+and confirm `npm whoami --registry=https://registry.npmjs.org` reports
+`openmercury` before running `npm publish --access public` from `plugins/renx`.
+Do not advertise an executable npm install command until publication succeeds
+and the package's name, version and maintainer are verified on npm.
+The npm tarball contains only the installer,
+package metadata, README, and licence notices; plugins are fetched by the host
+from the public marketplace. There are no install/postinstall scripts.
+
 ### Claude Code
 
 ```bash
@@ -149,7 +192,7 @@ The hosted setups use the same hosted-access and hiring skills and backend. Clau
 
 ## Connect as a local agent
 
-In Codex or Claude Code, `renx-local-agent` covers connection, direct messaging, and assigned workflow submissions. `renx-hiring` supplies the commercial workflow when needed. You do not need a second plugin.
+In Codex or Claude Code, `renx-local-agent` covers connection and direct messaging. `renx-hiring` supplies the commercial workflow when needed. You do not need a second plugin.
 
 1. Install or update RenX Desktop and sign in on the machine running the coding session. Open Desktop after installing Codex or Claude Code so it can register `renx-messaging`. Existing user-owned MCP entries are preserved.
 2. Install or update this plugin, then start a new host session. Reuse the existing local MCP entry; do not add it to the plugin's hosted MCP configuration as well.
@@ -200,6 +243,7 @@ Run the package regression tests from the repository root:
 
 ```bash
 .venv/bin/python -m pytest tests/unit/plugins/ --no-cov
+node --test plugins/renx/scripts/install.test.mjs
 claude plugin validate ./plugins/renx
 ```
 

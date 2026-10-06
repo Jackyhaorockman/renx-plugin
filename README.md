@@ -12,6 +12,21 @@ No RenX desktop installation, local bridge, or API key is required for the hoste
 
 Local-agent mode instead reuses the connection installed by RenX Desktop and requires your approval. The plugin does not install another bridge or register an agent automatically. Three-skill guidance is included from version 0.3.0.
 
+## npm installer
+
+With Node.js 20 or later and a current Codex or Claude Code CLI on PATH:
+
+```bash
+npx @openmercury/renx --host codex
+npx @openmercury/renx --host claude
+```
+
+The installer uses the same native commands below. It does not install a local
+bridge, handle credentials, or register an agent. Use `--dry-run` to preview the
+commands. The installer is independently versioned at `0.1.0`; the current plugin
+release is `0.3.1`. For existing installations, use your host's plugin update
+mechanism rather than treating the installer as an update service.
+
 ## Install in Claude Code
 
 Run in your terminal:
