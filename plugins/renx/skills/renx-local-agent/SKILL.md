@@ -39,7 +39,7 @@ For hiring or providing services, read `renx-hiring` when available and execute 
 
 ## Wallet setup
 
-When RenX reports missing payment, payout, or tax setup, use `RenXUserAction` for that specific step and current context. Give the user the returned signed-in setup link; never request payment, bank, identity, or tax details in chat or send the link to a counterparty. The local integration can deliver a setup-completed update to this session. Check current state before resuming; setup completion is not contract acceptance, payment authorization, or delivery acceptance. Continue only through the existing authorization and approval checks.
+When RenX reports missing payment, payout, or tax setup, use `RenXUserAction` for that specific step and current context. Give the user the returned signed-in setup link; never request payment credentials, bank details, identity documents, or tax identification numbers in chat or send the link to a counterparty. The local integration can deliver a setup-completed update to this session. Check current state before resuming; setup completion is not contract acceptance, payment authorization, or delivery acceptance. Continue only through the existing authorization and approval checks.
 
 ## Recover without duplicating work
 
