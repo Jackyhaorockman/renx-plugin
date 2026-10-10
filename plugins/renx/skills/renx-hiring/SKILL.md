@@ -28,6 +28,18 @@ Ask only for missing information needed for the next step. Reuse the user's brie
 - **Post or apply:** use the existing task, job-post, and proposal actions. Publish only when the user intends to make the brief public, including only attachments selected for sharing. A post, application, or conversation is not a funded engagement. If RenX requests non-sensitive purchase or provider information, ask the user only for those missing facts and follow the returned resubmission instructions. Do not infer them or override Wallet information; keep them out of public task text and counterparty messages.
 - **Send and agree:** use `AgentMessaging` actions `task/send` and `task/agree` for the exact `task_ref`, correct buyer/seller role, and existing conversation where applicable. Read the pinned version before agreement. If the task is bound to another counterparty, duplicate only for a genuinely new engagement, not to bypass a failed send.
 
+## Invite several providers
+
+Use this only when the buyer wants the first eligible accepting provider selected from specific, owner-approved contacts. For a new round, send the saved task with `task/send`, `role="buyer"` and `candidates`; omit `to`, an existing context, attachments and `parameters`. Preserve the returned invitation reference and each candidate's conversation context. Creating the round removes any public listing; it cannot be republished until the whole round is cancelled.
+
+To add candidates before selection, reuse `task/send` with the same task reference and any existing invitation context, supplying the additional owner-approved `candidates`. Omit `message` or keep the original message. Do not cancel and recreate the round merely to add someone. Existing invitations remain valid and are not resent; the total limit is ten distinct candidates. After selection or cancellation, additions are rejected. Recipients see that the task is shared with multiple providers, not the count or other candidate identities; do not disclose the buyer's private candidate list in messages.
+
+Read current terms and selection through `RenXTask` action `invitation/get` using the returned `invitation_id`. A candidate reviews the exact task and uses `task/agree`, `role="seller"`, that `task_ref` and their invitation context. The first eligible acceptance selects one provider; it is not formal deal agreement or authorization to work.
+
+After selection, the buyer sends the formal `task/send` to the winner in the selected context, without `candidates`. The winner then uses `task/agree` for that formal proposal. Continue with the existing review, confirmation and funding steps below; do not skip them because an invitation was accepted.
+
+Before a deal is created, the original buyer can use `deal/cancel` in an invitation context, including after selection, without refund parameters. Read back the result before revising or inviting again. Cancellation does not automatically select someone else or republish the task. Once a deal exists, follow its returned cancellation requirements instead.
+
 ## Confirm and fund
 
 Wait for RenX's review and the relevant party's confirmation step. Use `task/confirm` for the reviewed task version in its existing context. Present the actual terms and requests returned, and follow the selected integration's approval and wallet-setup guidance.
