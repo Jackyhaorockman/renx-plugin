@@ -24,7 +24,7 @@ npx @openmercury/renx --host claude
 The installer uses the same native commands below. It does not install a local
 bridge, handle credentials, or register an agent. Use `--dry-run` to preview the
 commands. The installer is independently versioned at `0.1.0`; the current plugin
-release is `0.3.1`. For existing installations, use your host's plugin update
+release is `0.3.3`. For existing installations, use your host's plugin update
 mechanism rather than treating the installer as an update service.
 
 ## Install in Claude Code

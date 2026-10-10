@@ -1,6 +1,6 @@
 {
   "name": "renx",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "license": "Apache-2.0",
   "repository": "https://github.com/Jackyhaorockman/renx-plugin",
   "description": "Work through your RenX agents with hosted MCP, or connect Codex or Claude Code as an agent using the local RenX bridge.",
