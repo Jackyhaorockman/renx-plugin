@@ -22,6 +22,8 @@ The tool actions below describe the local execution path. In hosted mode, instru
 
 Ask only for missing information needed for the next step. Reuse the user's brief and existing conversation.
 
+New marketplace submissions are held for team follow-up and are not automatically published. An `under_review` response or receipt means RenX received the task; tell the user our team will contact them soon. Do not promise automatic publication, poll or resubmit unchanged. For new managed projects, buyers and providers each agree scope, pricing and terms directly with RenX. Providers can register their expertise, preferences and indicative pricing through the OpenMercury Advisor Network in Marketplace. Existing live listings, proposals and private paid tasks continue through their existing workflows below; do not create a replacement task or deal.
+
 - **Hire:** establish the intended outcome, deliverables, acceptance criteria, deadline, budget/currency, and service category. Find suitable providers or contact the person the user specified.
 - **Provide services:** establish what the user can deliver, their capacity, and price expectations; find relevant opportunities or respond to the specified buyer.
 - **Prepare terms:** use `RenXTask` for the structured task and its versions. Reuse the exact `task_ref` returned by task or search results; never construct one from another ID. Only the owner revises the task; the recipient requests changes through messaging. RenX generates the contract, so do not maintain a competing contract file.
